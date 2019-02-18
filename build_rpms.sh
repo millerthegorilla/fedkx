@@ -21,42 +21,42 @@ DEB_PATH=$2
 FILE_NAME=$3
 BUILT_RPMS_DIR=$4
 ARCH=$5
-RPM_BUILD_ROOT=$DEB_PATH/root/rpmbuild/BUILDROOT/
+RPM_BUILD_ROOT=${DEB_PATH}/root/rpmbuild/BUILDROOT/
 
-if [ ! -d "$RPM_BUILD_ROOT" ]; then
-  mkdir -p "$RPM_BUILD_ROOT"
+if [ ! -d "${RPM_BUILD_ROOT}" ]; then
+  mkdir -p "${RPM_BUILD_ROOT}"
 fi
 
-if [ ! -d "$BUILT_RPMS_DIR" ]; then
-  mkdir -p "$BUILT_RPMS_DIR"
+if [ ! -d "${BUILT_RPMS_DIR}" ]; then
+  mkdir -p "${BUILT_RPMS_DIR}"
 fi
 
-cd "$RPM_BUILD_ROOT"
+cd "${RPM_BUILD_ROOT}"
 
-log+=$(alien -r -g -v "$DEB_PATH")
+log+=$(alien -r -g -v "${DEB_PATH}")
 
 aliendir=$(find . -maxdepth 1 -type d -name '[^.]?*' -printf %f -quit)
 
 
-specfilename=$(find "$RPM_BUILD_ROOT$aliendir" -type f -name \*.spec)
-specfilename=$(basename "$specfilename")
+specfilename=$(find "${RPM_BUILD_ROOT}${aliendir}" -type f -name \*.spec)
+specfilename=$(basename "${specfilename}")
 
 if [ "$ARCH"=='amd64' ]; then
-    adir=$(echo "$specfilename" | sed 's/spec/x86_64\//')
+    adir=$(echo "${specfilename}" | sed 's/spec/x86_64\//')
 else
-    adir=$(echo "$specfilename" | sed 's/spec/x386\//')
+    adir=$(echo "${specfilename}" | sed 's/spec/x386\//')
 fi
 
-mv "$RPM_BUILD_ROOT$aliendir" "$RPM_BUILD_ROOT$adir"
-mv "$RPM_BUILD_ROOT$adir/usr" "$RPM_BUILD_ROOT"
+mv "${RPM_BUILD_ROOT}${aliendir}" "${RPM_BUILD_ROOT}${adir}"
+mv "${RPM_BUILD_ROOT}${adir}/usr" "${RPM_BUILD_ROOT}"
 
-specfilepath="$RPM_BUILD_ROOT$adir$specfilename"
+specfilepath="${RPM_BUILD_ROOT}${adir}${specfilename}"
 
 # edit spec file to remove unnecessary prefixes
-sed -i '/^%dir/ d' "$specfilepath"
+sed -i '/^%dir/ d' "${specfilepath}"
 
-cd "$adir"
-log=$log"\n"$(rpmbuild --bb --rebuild --noclean --buildroot "$RPM_BUILD_ROOT" "$specfilepath")
-mv "$RPM_BUILD_ROOT"*.rpm "$BUILT_RPMS_DIR"
-echo $log
+cd "${adir}"
+log=${log}"\n"$(rpmbuild --bb --rebuild --noclean --buildroot "${RPM_BUILD_ROOT}" "${specfilepath}")
+mv "${RPM_BUILD_ROOT}"*.rpm "${BUILT_RPMS_DIR}"
+echo ${log}
 exit 0

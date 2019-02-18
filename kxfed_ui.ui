@@ -283,7 +283,13 @@
      <string>Preferences...</string>
     </property>
    </widget>
+   <widget class="QMenu" name="menuRefresh_Cache">
+    <property name="title">
+     <string>Refresh Cache</string>
+    </property>
+   </widget>
    <addaction name="menuPreferences"/>
+   <addaction name="menuRefresh_Cache"/>
   </widget>
  </widget>
  <resources/>

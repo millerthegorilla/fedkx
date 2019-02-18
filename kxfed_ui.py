@@ -102,8 +102,11 @@ class Ui_MainWindow(object):
         self.menuBar.setObjectName("menuBar")
         self.menuPreferences = QtWidgets.QMenu(self.menuBar)
         self.menuPreferences.setObjectName("menuPreferences")
+        self.menuRefresh_Cache = QtWidgets.QMenu(self.menuBar)
+        self.menuRefresh_Cache.setObjectName("menuRefresh_Cache")
         MainWindow.setMenuBar(self.menuBar)
         self.menuBar.addAction(self.menuPreferences.menuAction())
+        self.menuBar.addAction(self.menuRefresh_Cache.menuAction())
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -121,4 +124,5 @@ class Ui_MainWindow(object):
         self.load_label.setText(_translate("MainWindow", "loading..."))
         self.reconnectBtn.setText(_translate("MainWindow", "Reconnect"))
         self.menuPreferences.setTitle(_translate("MainWindow", "Preferences..."))
+        self.menuRefresh_Cache.setTitle(_translate("MainWindow", "Refresh Cache"))
 

@@ -27,7 +27,7 @@ import subprocess
 import traceback
 import threading
 from os.path import splitext
-
+import shutil
 
 # TODO send exception data from stderror of rpm script and raise exception
 # TODO and add pkg to cfg from exception_message in kxfed.py
@@ -55,6 +55,9 @@ class Packages(QObject):
         self._mp_pool = mp_pool(10)
         self._result = None
         self._lock = threading.Lock()
+        self._pkg_manager = "dnf"
+        if shutil.which("apt") is not None:
+            self._pkg_manager = "apt"
 
     def connect(self):
         self._launchpad = Launchpad.login_anonymously('kxfed.py', 'production')
