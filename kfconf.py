@@ -16,8 +16,8 @@ __this__ = sys.modules[__name__]
 
 config_dir = str(Path.home()) + '/' + CONFIG_DIR
 tmp_dir = str(Path.home()) + '/.local/share/kxfed/'
-debs_dir = tmp_dir + 'debs'
-rpms_dir = tmp_dir + 'rpms'
+debs_dir = tmp_dir + 'debs/'
+rpms_dir = tmp_dir + 'rpms/'
 
 
 def mkpath(path):
@@ -53,6 +53,7 @@ if not os.path.exists(config_dir + CONFIG_FILE):
     cfg['debs_dir']                        = debs_dir
     cfg['log']                             = ''
     cfg['rpms_dir']                        = rpms_dir
+    cfg['install_action']                  = "convert-install"
 else:
     cfg = ConfigObj(config_dir + CONFIG_FILE)
 

@@ -136,14 +136,19 @@ class Packages(QObject):
                 cfg['downloading'][ppa][pkgid] = pkg
                 debs_dir = cfg['debs_dir']
                 rpms_dir = cfg['rpms_dir']
+                tmp_dir = cfg['tmp_dir']
+                install_action = cfg['install_action']
+
                 self._thread_pool.apply_async(self._get_deb_links_and_download,
                                               (ppa,
                                                pkg,
                                                debs_dir,
-                                               rpms_dir,))
+                                               rpms_dir,
+                                               tmp_dir,
+                                               install_action,))
         self.progress_adjusted.emit(0, 0)
 
-    def _get_deb_links_and_download(self, ppa, pkg, debs_dir, rpms_dir):
+    def _get_deb_links_and_download(self, ppa, pkg, debs_dir, rpms_dir, tmp_dir, install_action):
         # threaded function called from install_packages
         try:
             html = requests.get(self._lp_team.web_link
@@ -171,17 +176,22 @@ class Packages(QObject):
                             f.write(data)
                             self.progress_adjusted.emit(len(data), total_length)
                             total_length = 0
-                # build_rpms.sh working_dir deb_filepath filename rpms_dir arch
-                result = self._mp_pool.apply_async(subprocess.check_output,
-                                                   (['pkexec',
-                                                     '/home/james/Src/kxfed/build_rpms.sh',
-                                                     debs_dir,
-                                                     fp,
-                                                     rpms_dir,
-                                                     'amd64'],))
-                logging.log(logging.DEBUG, result.get())
-                self.progress_adjusted.emit(0, 0)
-                self.message.emit('converted ' + fp + ' successfully', 200)
+                # at the moment files are always downloaded, but might be able to
+                # store debs at some point, already downloaded and just processing
+                # for conversion and/or installation
+                if "convert" in install_action:
+                    result = self._mp_pool.apply_async(subprocess.check_output,
+                                                       (['pkexec',
+                                                         '/home/james/Src/kxfed/build_rpms.sh',
+                                                         fp,
+                                                         debs_dir,
+                                                         rpms_dir,
+                                                         tmp_dir,
+                                                         'amd64',
+                                                         install_action],))
+                    logging.log(logging.DEBUG, result.get())
+                    self.progress_adjusted.emit(0, 0)
+                    self.message.emit('converted ' + fp + ' successfully', 200)
         except (requests.HTTPError, subprocess.CalledProcessError) as e:
             if e is subprocess.CalledProcessError:
                 logging.log(logging.ERROR, e.output)

@@ -25,34 +25,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/packages.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="179" column="62" lean-forward="true" selection-start-line="179" selection-start-column="62" selection-end-line="179" selection-end-column="62" />
+            <state relative-caret-position="355">
+              <caret line="191" selection-start-line="191" selection-end-line="191" />
               <folding>
                 <element signature="e#729#773#0" expanded="true" />
-                <marker date="1550595358639" expanded="true" signature="2292:2440" ph="..." />
-                <marker date="1550595358639" expanded="true" signature="8321:8326" ph="..." />
+                <marker date="1550608780559" expanded="true" signature="2292:2440" ph="..." />
+                <marker date="1550608780559" expanded="true" signature="8927:8932" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build_rpms.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.rpmmacros">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="47" selection-end-line="1" />
+            <state relative-caret-position="300">
+              <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -69,7 +60,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tvmodel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
+            <state relative-caret-position="-308">
               <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
@@ -78,7 +69,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kxfed.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2473">
+            <state relative-caret-position="22">
               <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
@@ -102,8 +93,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tvitem.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+            <state relative-caret-position="-220">
+              <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -111,8 +102,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kfconf.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="-980">
+              <caret line="33" column="21" lean-forward="true" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
               <folding>
                 <element signature="e#12#26#0" expanded="true" />
               </folding>
@@ -226,7 +217,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -238,6 +228,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -311,22 +302,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.5852459" side_tool="true" weight="0.1814346" />
       <window_info content_ui="combo" id="Project" order="1" sideWeight="0.4147541" visible="true" weight="0.18133895" />
       <window_info auto_hide="true" id="Structure" internal_type="SLIDING" order="2" sideWeight="0.5852459" type="SLIDING" weight="0.1814346" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.84818137" weight="0.34497815" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.847127" weight="0.34497815" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Debug" order="5" sideWeight="0.74538743" visible="true" weight="0.4257642" />
+      <window_info active="true" anchor="bottom" id="Debug" order="5" sideWeight="0.743806" visible="true" weight="0.4257642" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49657354" weight="0.33078602" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49920928" weight="0.3286026" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.25461254" side_tool="true" visible="true" weight="0.4257642" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.5608856" weight="0.39628822" />
-      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.46599895" weight="0.39082968" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.256194" side_tool="true" visible="true" weight="0.4257642" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.5598313" weight="0.3973799" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.4654718" weight="0.39082968" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -361,18 +351,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/packages.py</url>
-          <line>185</line>
-          <option name="timeStamp" value="65" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/packages.py</url>
-          <line>181</line>
-          <option name="timeStamp" value="66" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/packages.py</url>
-          <line>174</line>
+          <line>182</line>
           <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/packages.py</url>
+          <line>191</line>
+          <option name="timeStamp" value="79" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -683,6 +668,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.rpmmacros">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="47" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dependencies">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -690,30 +682,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tvitem.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/install_pkg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tvmodel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kxfed.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2473">
+        <state relative-caret-position="22">
           <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
@@ -724,39 +695,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tvmodel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-308">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/install_pkg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tvitem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-220">
+          <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/kfconf.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="-980">
+          <caret line="33" column="21" lean-forward="true" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
           <folding>
             <element signature="e#12#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.rpmmacros">
+    <entry file="file://$PROJECT_DIR$/build_rpms.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="47" selection-end-line="1" />
+        <state relative-caret-position="300">
+          <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/packages.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="179" column="62" lean-forward="true" selection-start-line="179" selection-start-column="62" selection-end-line="179" selection-end-column="62" />
+        <state relative-caret-position="355">
+          <caret line="191" selection-start-line="191" selection-end-line="191" />
           <folding>
             <element signature="e#729#773#0" expanded="true" />
-            <marker date="1550595358639" expanded="true" signature="2292:2440" ph="..." />
-            <marker date="1550595358639" expanded="true" signature="8321:8326" ph="..." />
+            <marker date="1550608780559" expanded="true" signature="2292:2440" ph="..." />
+            <marker date="1550608780559" expanded="true" signature="8927:8932" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build_rpms.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
         </state>
       </provider>
     </entry>

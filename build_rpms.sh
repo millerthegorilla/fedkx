@@ -4,49 +4,60 @@
 
 ##  this all depends on making a .rpmmacros file in users home dir with
 ##   %_topdir      /home/james/.local/share/kxfed/rpmbuild    inside it.
-DEB_DIR=$1
-FILE=$2
+FILE=$1
+DEB_DIR=$2
 FILE_NAME=${FILE}.deb
 DEB_PATH=${DEB_DIR}${FILE_NAME}
 BUILT_RPMS_DIR=$3
-ARCH=$4
-#RPM_BUILD_ROOT=${DEB_PATH}/root/rpmbuild/BUILDROOT/
-RPM_BUILD_ROOT=/home/james/.local/share/kxfed/rpmbuild/BUILDROOT/
+TMP_DIR=$4
+ARCH=$5
+INSTALL_ACTION=$6
+
+RPM_BUILD_ROOT=${TMP_DIR}rpmbuild/BUILDROOT/
 PKG_BUILD_ROOT=${RPM_BUILD_ROOT}${FILE}
-SPECFILE_PATH=${RPM_BUILD_ROOT}${FILE}
-#
-#echo deb dir is ${DEB_DIR}
-#echo Deb path is ${DEB_PATH}
-#echo rpm_build_root is ${RPM_BUILD_ROOT}
-#echo filename is ${FILE_NAME}
-#echo BUILT_RPMS_DIR is ${BUILT_RPMS_DIR}
-#echo pkg_build_Root is ${PKG_BUILD_ROOT}
-#
+
 if [ ! -d "${RPM_BUILD_ROOT}" ]; then
-  mkdir -p "${RPM_BUILD_ROOT}"
+    mkdir -p "${RPM_BUILD_ROOT}"
 fi
 
 if [ ! -d "${RPM_BUILD_ROOT}" ]; then
-  mkdir -p "${RPM_BUILD_ROOT}"
+    mkdir -p "${RPM_BUILD_ROOT}"
 fi
 
 if [ ! -d "${BUILT_RPMS_DIR}" ]; then
-  mkdir -p "${BUILT_RPMS_DIR}"
+    mkdir -p "${BUILT_RPMS_DIR}"
+fi
+
+if [ "${ARCH}"="amd64" ]; then
+    ARCH="x86_64"
+fi
+
+USER_HOME=$(echo $(getent passwd $USER )| cut -d : -f 6)
+RPM_MACRO_FILE=${USER_HOME}/.rpmmacros
+if [ ! -f "${RPM_MACRO_FILE}" ]; then
+    touch ${RPM_MACRO_FILE}
+    echo  "%_topdir      ${TMP_DIR}rpmbuild" > ${RPM_MACRO_FILE}
+else
+    mv ${RPM_MACRO_FILE} ${RPM_MACRO_FILE}.old
+    touch ${RPM_MACRO_FILE}
+    echo  "%_topdir      ${TMP_DIR}rpmbuild" > ${RPM_MACRO_FILE}
 fi
 
 cd "${RPM_BUILD_ROOT}"
 
 tmp=$(sudo alien -r -g -k -v "${DEB_PATH}")
-ALIEN_FILENAME=$(echo ${tmp} | grep -oP '(?<=mkdir\s).*')
-echo tmp is ${tmp}
-echo alien_filename is ${ALIEN_FILENAME}
-ALIEN_DIR="${ALIEN_FILENAME}-1.x86_64/"
+ALIEN_FILENAME=$(echo ${tmp} | grep -oP '(?<=mkdir\s)([^\s]+)')
+ALIEN_DIR="${ALIEN_FILENAME}-1.${ARCH}/"
 sudo mv ${RPM_BUILD_ROOT}${ALIEN_FILENAME} ${RPM_BUILD_ROOT}${ALIEN_DIR}
-specfilepath="${RPM_BUILD_ROOT}${ALIEN_DIR}${ALIEN_FILENAME}-1.spec"
+SPECFILE_PATH="${RPM_BUILD_ROOT}${ALIEN_DIR}${ALIEN_FILENAME}-1.spec"
 
-$(sudo sed -i '/^%dir/ d' "${specfilepath}")
+$(sudo sed -i '/^%dir/ d' "${SPECFILE_PATH}")
 
-echo rpmbuild is "\n"$(rpmbuild --bb --rebuild ${specfilepath})
+rpmbuild --bb --rebuild ${SPECFILE_PATH}
 mv "${RPM_BUILD_ROOT}../"*.rpm "${BUILT_RPMS_DIR}"
-#echo ${log}
+
+if [[ "${INSTALL_ACTION}" == *"install"* ]]; then
+    echo $(sudo dnf install -y ${BUILT_RPMS_DIR}${ALIEN_FILENAME}-1.${ARCH}.rpm)
+fi
+
 exit 0
