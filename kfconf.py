@@ -26,7 +26,9 @@ def mkpath(path):
 
 
 paths = [config_dir, tmp_dir, debs_dir, rpms_dir]
-map(mkpath, paths)
+#map(mkpath, paths)
+for path in paths:
+    mkpath(path)
 
 if not os.path.exists(config_dir + CONFIG_FILE):
     cfg = ConfigObj()

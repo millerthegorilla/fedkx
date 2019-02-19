@@ -29,6 +29,7 @@ import threading
 from os.path import splitext
 import shutil
 
+
 # TODO send exception data from stderror of rpm script and raise exception
 # TODO and add pkg to cfg from exception_message in kxfed.py
 # TODO and find out why the script is not working
@@ -157,8 +158,8 @@ class Packages(QObject):
             for link in links:
                 # TODO try os path basename etc out of interest
                 fn = link['href'].rsplit('/', 1)[-1]
-                fp = debs_dir + splitext(fn)[0]
-                with open(fp, "wb+") as f:
+                fp = splitext(fn)[0]
+                with open(debs_dir + fn, "wb+") as f:
                     response = requests.get(link['href'], stream=True)
                     total_length = response.headers.get('content-length')
 
@@ -172,11 +173,10 @@ class Packages(QObject):
                             total_length = 0
                 # build_rpms.sh working_dir deb_filepath filename rpms_dir arch
                 result = self._mp_pool.apply_async(subprocess.check_output,
-                                                   (['/bin/bash',
+                                                   (['pkexec',
                                                      '/home/james/Src/kxfed/build_rpms.sh',
                                                      debs_dir,
                                                      fp,
-                                                     fn,
                                                      rpms_dir,
                                                      'amd64'],))
                 logging.log(logging.DEBUG, result.get())

@@ -1,27 +1,30 @@
-#    This file is part of rpm_maker.
-
-#    rpm_maker is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU General Public License as published by
-#    the Free Software Foundation, either version 3 of the License, or
-#    (at your option) any later version.
-
-#    rpm_maker is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU General Public License for more details.
-
-#    You should have received a copy of the GNU General Public License
-#    along with rpm_maker.  If not, see <https://www.gnu.org/licenses/>.
-#    (c) 2018 - James Stewart Miller
-#!/bin/bash
+#! /bin/bash
 # build_rpms.sh working_dir deb_filepath rpms_dir arch
 # rpms_dir can be working_dir/rpms
-RPM_ROOT=$1
-DEB_PATH=$2
-FILE_NAME=$3
-BUILT_RPMS_DIR=$4
-ARCH=$5
-RPM_BUILD_ROOT=${DEB_PATH}/root/rpmbuild/BUILDROOT/
+
+##  this all depends on making a .rpmmacros file in users home dir with
+##   %_topdir      /home/james/.local/share/kxfed/rpmbuild    inside it.
+DEB_DIR=$1
+FILE=$2
+FILE_NAME=${FILE}.deb
+DEB_PATH=${DEB_DIR}${FILE_NAME}
+BUILT_RPMS_DIR=$3
+ARCH=$4
+#RPM_BUILD_ROOT=${DEB_PATH}/root/rpmbuild/BUILDROOT/
+RPM_BUILD_ROOT=/home/james/.local/share/kxfed/rpmbuild/BUILDROOT/
+PKG_BUILD_ROOT=${RPM_BUILD_ROOT}${FILE}
+SPECFILE_PATH=${RPM_BUILD_ROOT}${FILE}
+#
+#echo deb dir is ${DEB_DIR}
+#echo Deb path is ${DEB_PATH}
+#echo rpm_build_root is ${RPM_BUILD_ROOT}
+#echo filename is ${FILE_NAME}
+#echo BUILT_RPMS_DIR is ${BUILT_RPMS_DIR}
+#echo pkg_build_Root is ${PKG_BUILD_ROOT}
+#
+if [ ! -d "${RPM_BUILD_ROOT}" ]; then
+  mkdir -p "${RPM_BUILD_ROOT}"
+fi
 
 if [ ! -d "${RPM_BUILD_ROOT}" ]; then
   mkdir -p "${RPM_BUILD_ROOT}"
@@ -33,30 +36,17 @@ fi
 
 cd "${RPM_BUILD_ROOT}"
 
-log+=$(alien -r -g -v "${DEB_PATH}")
+tmp=$(sudo alien -r -g -k -v "${DEB_PATH}")
+ALIEN_FILENAME=$(echo ${tmp} | grep -oP '(?<=mkdir\s).*')
+echo tmp is ${tmp}
+echo alien_filename is ${ALIEN_FILENAME}
+ALIEN_DIR="${ALIEN_FILENAME}-1.x86_64/"
+sudo mv ${RPM_BUILD_ROOT}${ALIEN_FILENAME} ${RPM_BUILD_ROOT}${ALIEN_DIR}
+specfilepath="${RPM_BUILD_ROOT}${ALIEN_DIR}${ALIEN_FILENAME}-1.spec"
 
-aliendir=$(find . -maxdepth 1 -type d -name '[^.]?*' -printf %f -quit)
+$(sudo sed -i '/^%dir/ d' "${specfilepath}")
 
-
-specfilename=$(find "${RPM_BUILD_ROOT}${aliendir}" -type f -name \*.spec)
-specfilename=$(basename "${specfilename}")
-
-if [ "$ARCH"=='amd64' ]; then
-    adir=$(echo "${specfilename}" | sed 's/spec/x86_64\//')
-else
-    adir=$(echo "${specfilename}" | sed 's/spec/x386\//')
-fi
-
-mv "${RPM_BUILD_ROOT}${aliendir}" "${RPM_BUILD_ROOT}${adir}"
-mv "${RPM_BUILD_ROOT}${adir}/usr" "${RPM_BUILD_ROOT}"
-
-specfilepath="${RPM_BUILD_ROOT}${adir}${specfilename}"
-
-# edit spec file to remove unnecessary prefixes
-sed -i '/^%dir/ d' "${specfilepath}"
-
-cd "${adir}"
-log=${log}"\n"$(rpmbuild --bb --rebuild --noclean --buildroot "${RPM_BUILD_ROOT}" "${specfilepath}")
-mv "${RPM_BUILD_ROOT}"*.rpm "${BUILT_RPMS_DIR}"
-echo ${log}
+echo rpmbuild is "\n"$(rpmbuild --bb --rebuild ${specfilepath})
+mv "${RPM_BUILD_ROOT}../"*.rpm "${BUILT_RPMS_DIR}"
+#echo ${log}
 exit 0
