@@ -73,6 +73,7 @@ class MainW (QMainWindow, Ui_MainWindow):
         self.pkg_model.packages.progress_label.connect(self.progress_label_change)
         self.pkg_model.packages.message.connect(self.message_user)
         self.pkg_model.packages.exception.connect(self._exception)
+
         # user signals
         self.ppa_combo.currentIndexChanged.connect(self.populate_pkgs)
         self.install_btn.clicked.connect(self.install_pkgs)
@@ -159,7 +160,6 @@ class MainW (QMainWindow, Ui_MainWindow):
                 self._download_total += m
             if v != 0:
                 self._download_current += v
-            self.statusbar.showMessage("Downloading Packages")
             self.progress_bar.setVisible(True)
             self.progress_bar.setMaximum(self._download_total)
             self.progress_bar.setValue(self._download_current)
