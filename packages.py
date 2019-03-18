@@ -205,6 +205,7 @@ class Packages(QObject):
         self.progress_adjusted.emit(0, 0)
         self.progress_label.emit('Finished Converting Packages')
 
+
     def _get_deb_links_and_download(self, ppa, pkg, debs_dir):
         # threaded function called from install_packages
         try:

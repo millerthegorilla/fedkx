@@ -176,7 +176,6 @@ class MainW (QMainWindow, Ui_MainWindow):
                 self._download_total += m
             if v != 0:
                 self._download_current += v
-            self.statusbar.showMessage("Downloading Packages", 100)
             self.progress_bar.setVisible(True)
             self.progress_bar.setMaximum(self._download_total)
             self.progress_bar.setValue(self._download_current)
