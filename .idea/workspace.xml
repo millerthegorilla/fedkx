@@ -6,10 +6,18 @@
       <change beforePath="$PROJECT_DIR$/bob.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build_rpm.sh" beforeDir="false" afterPath="$PROJECT_DIR$/build_rpm.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build_rpms.sh" beforeDir="false" afterPath="$PROJECT_DIR$/build_rpms.sh" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/job_pool.sh" beforeDir="false" afterPath="$PROJECT_DIR$/job_pool.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kfconf.py" beforeDir="false" afterPath="$PROJECT_DIR$/kfconf.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kxfed.py" beforeDir="false" afterPath="$PROJECT_DIR$/kxfed.py" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/kfconf.py" beforeDir="false" afterPath="$PROJECT_DIR$/kfconf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kxfed.py" beforeDir="false" afterPath="$PROJECT_DIR$/kxfed.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kxfed_prefs.py" beforeDir="false" afterPath="$PROJECT_DIR$/kxfed_prefs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kxfed_prefs_ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/kxfed_prefs_ui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kxfed_prefs_ui.ui" beforeDir="false" afterPath="$PROJECT_DIR$/kxfed_prefs_ui.ui" afterDir="false" />
+>>>>>>> bash_fork
       <change beforePath="$PROJECT_DIR$/packages.py" beforeDir="false" afterPath="$PROJECT_DIR$/packages.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rpm_maker/conf/rpm_maker.conf" beforeDir="false" afterPath="$PROJECT_DIR$/rpm_maker/conf/rpm_maker.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rpm_maker/rpm_maker.sh" beforeDir="false" afterPath="$PROJECT_DIR$/rpm_maker/rpm_maker.sh" afterDir="false" />
@@ -32,44 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tvmodel.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-353">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
-              <folding>
-                <element signature="e#23#62#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dependencies">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kxfed.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="97" column="14" lean-forward="true" selection-start-line="97" selection-start-column="14" selection-end-line="97" selection-end-column="14" />
-              <folding>
-                <element signature="e#19#59#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/packages.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="188" selection-start-line="188" selection-end-line="188" />
+            <state relative-caret-position="222">
+              <caret line="134" column="35" lean-forward="true" selection-start-line="134" selection-start-column="35" selection-end-line="134" selection-end-column="35" />
               <folding>
                 <element signature="e#729#773#0" expanded="true" />
               </folding>
@@ -78,10 +53,136 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/tvmodel.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-353">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
+              <folding>
+                <element signature="e#23#62#0" expanded="true" />
+=======
+        <entry file="file://$PROJECT_DIR$/kxfed_prefs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="46" column="71" selection-start-line="46" selection-start-column="71" selection-end-line="46" selection-end-column="71" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kxfed_prefs_ui.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="27" column="151" selection-start-line="27" selection-start-column="151" selection-end-line="27" selection-end-column="151" />
+              <folding>
+                <element signature="e#201#243#0" expanded="true" />
+>>>>>>> bash_fork
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/dependencies">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+=======
+        <entry file="file://$PROJECT_DIR$/QLabelChanged.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#34#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kxfed.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1214">
+              <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+              <folding>
+                <element signature="e#19#59#0" expanded="true" />
+                <marker date="1551697998131" expanded="true" signature="3087:3091" ph="..." />
+                <marker date="1551697998131" expanded="true" signature="3259:3267" ph="..." />
+                <marker date="1551697998131" expanded="true" signature="6655:6735" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kfconf.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="514">
+              <caret line="62" column="50" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="50" />
+              <folding>
+                <element signature="e#12#26#0" expanded="true" />
+              </folding>
+>>>>>>> bash_fork
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/kxfed.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="464">
+              <caret line="97" column="14" lean-forward="true" selection-start-line="97" selection-start-column="14" selection-end-line="97" selection-end-column="14" />
+              <folding>
+                <element signature="e#19#59#0" expanded="true" />
+              </folding>
+=======
+        <entry file="file://$PROJECT_DIR$/build_rpm.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="41" column="13" selection-start-line="41" selection-end-line="41" selection-end-column="45" />
+>>>>>>> bash_fork
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/packages.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="188" selection-start-line="188" selection-end-line="188" />
+              <folding>
+                <element signature="e#729#773#0" expanded="true" />
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tvmodel.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1287">
+              <caret line="79" selection-start-line="79" selection-end-line="79" />
+              <folding>
+                <element signature="e#23#62#0" expanded="true" />
+>>>>>>> bash_fork
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/build_rpms.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="77">
               <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+=======
+        <entry file="file://$PROJECT_DIR$/kxfed_ui.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="557">
+              <caret line="56" column="36" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
+>>>>>>> bash_fork
             </state>
           </provider>
         </entry>
@@ -89,8 +190,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/job_pool.sh">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="-1430">
               <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+=======
+            <state relative-caret-position="-345">
+              <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+>>>>>>> bash_fork
             </state>
           </provider>
         </entry>
@@ -173,12 +279,22 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/queue.sh" />
         <option value="$PROJECT_DIR$/install_pkgs.py" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/build_rpm.sh" />
         <option value="$USER_HOME$/.config/kxfed/kxfed.cfg" />
         <option value="$PROJECT_DIR$/kxfed_prefs_ui.py" />
         <option value="$PROJECT_DIR$/kxfed_prefs.py" />
         <option value="$PROJECT_DIR$/kfconf.py" />
         <option value="$PROJECT_DIR$/tvmodel.py" />
+=======
+        <option value="$PROJECT_DIR$/kxfed.py" />
+        <option value="$PROJECT_DIR$/build_rpms.sh" />
+        <option value="$PROJECT_DIR$/build_rpm.sh" />
+        <option value="$USER_HOME$/.config/kxfed/kxfed.cfg" />
+        <option value="$PROJECT_DIR$/kxfed_prefs_ui.py" />
+        <option value="$PROJECT_DIR$/kfconf.py" />
+        <option value="$PROJECT_DIR$/kxfed_prefs.py" />
+>>>>>>> bash_fork
         <option value="$PROJECT_DIR$/packages.py" />
         <option value="$PROJECT_DIR$/build_rpms.sh" />
         <option value="$PROJECT_DIR$/kxfed.py" />
@@ -236,8 +352,12 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+<<<<<<< HEAD
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+=======
+    <property name="last_opened_file_path" value="$USER_HOME$/.config/kxfed/kxfed.cfg" />
+>>>>>>> bash_fork
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -415,59 +535,103 @@
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
+<<<<<<< HEAD
         <watch expression="p_b_h" language="Python" />
+=======
+        <watch expression="self.sender() is self.ui.download_chkbox" language="Python" />
+>>>>>>> bash_fork
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
       <expression>
+<<<<<<< HEAD
         <expression-string>p_b_h</expression-string>
+=======
+        <expression-string>self.sender() is self.ui.download_chkbox</expression-string>
+>>>>>>> bash_fork
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
+<<<<<<< HEAD
         <expression-string>pkgs</expression-string>
+=======
+        <expression-string>self.sender()</expression-string>
+>>>>>>> bash_fork
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
+<<<<<<< HEAD
         <expression-string>self.load_label.isVisible()</expression-string>
+=======
+        <expression-string>str(tag.contents[0])</expression-string>
+>>>>>>> bash_fork
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
+<<<<<<< HEAD
         <expression-string>cfg['cache']['arguments']['filename']</expression-string>
+=======
+        <expression-string>tag.contents[0]</expression-string>
+>>>>>>> bash_fork
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
+<<<<<<< HEAD
         <expression-string>self._packages.populate_pkgs</expression-string>
+=======
+        <expression-string>tag.contents</expression-string>
+>>>>>>> bash_fork
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
+<<<<<<< HEAD
         <expression-string>self._ppas_json</expression-string>
+=======
+        <expression-string>tag[0]</expression-string>
+>>>>>>> bash_fork
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
+<<<<<<< HEAD
         <expression-string>self.</expression-string>
+=======
+        <expression-string>tag.contents[0].string.string</expression-string>
+>>>>>>> bash_fork
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
+<<<<<<< HEAD
         <expression-string>self.__ppas_json['entries']</expression-string>
+=======
+        <expression-string>tag.contents[0].string</expression-string>
+>>>>>>> bash_fork
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
+<<<<<<< HEAD
         <expression-string>self.ppa_combo</expression-string>
+=======
+        <expression-string>BeautifulSoup(str(tag))</expression-string>
+>>>>>>> bash_fork
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
+<<<<<<< HEAD
         <expression-string>not self.load_label.isVisible()</expression-string>
+=======
+        <expression-string>BeautifulSoup(tag)</expression-string>
+>>>>>>> bash_fork
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -521,6 +685,23 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+=======
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/-921856370/PyQt5/QtGui/QStandardItemModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="165" column="8" selection-start-line="165" selection-start-column="8" selection-end-line="165" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib64/python3.7/logging/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31724">
+          <caret line="1444" selection-start-line="1444" selection-end-line="1444" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> bash_fork
     <entry file="file://$PROJECT_DIR$/venv/lib64/python3.7/site-packages/lazr/restfulclient/resource.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16082">
@@ -661,6 +842,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/install_pkgs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -681,14 +863,58 @@
           <caret line="158" column="19" selection-start-line="158" selection-start-column="19" selection-end-line="158" selection-end-column="19" />
         </state>
       </provider>
+=======
+    <entry file="file://$PROJECT_DIR$/kxfed_ui.ui">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-264" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bob.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/install_pkgs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="e#20#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build_rpms.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="35" column="2" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job_pool.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+>>>>>>> bash_fork
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helpers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.config/kxfed/kxfed.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kxfed_ui.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1232">
+        <state relative-caret-position="557">
           <caret line="56" column="36" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/kxfed_prefs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="667">
@@ -707,30 +933,64 @@
           <caret line="95" selection-start-line="95" selection-end-line="95" />
           <folding>
             <element signature="e#12#26#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/build_rpm.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="41" column="13" selection-start-line="41" selection-end-line="41" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QLabelChanged.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+>>>>>>> bash_fork
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/tvmodel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-353">
           <caret line="45" selection-start-line="45" selection-end-line="45" />
           <folding>
             <element signature="e#23#62#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/kxfed_prefs_ui.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="27" column="151" selection-start-line="27" selection-start-column="151" selection-end-line="27" selection-end-column="151" />
+          <folding>
+            <element signature="e#201#243#0" expanded="true" />
+>>>>>>> bash_fork
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kxfed.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="464">
           <caret line="97" column="14" lean-forward="true" selection-start-line="97" selection-start-column="14" selection-end-line="97" selection-end-column="14" />
           <folding>
             <element signature="e#19#59#0" expanded="true" />
+=======
+        <state relative-caret-position="-1214">
+          <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+          <folding>
+            <element signature="e#19#59#0" expanded="true" />
+            <marker date="1551697998131" expanded="true" signature="3087:3091" ph="..." />
+            <marker date="1551697998131" expanded="true" signature="3259:3267" ph="..." />
+            <marker date="1551697998131" expanded="true" signature="6655:6735" ph="..." />
+>>>>>>> bash_fork
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/job_pool.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1430">
@@ -749,13 +1009,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+=======
+    <entry file="file://$PROJECT_DIR$/tvitem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-345">
+          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tvmodel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1287">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+          <folding>
+            <element signature="e#23#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kfconf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="62" column="50" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="50" />
+          <folding>
+            <element signature="e#12#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kxfed_prefs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="46" column="71" selection-start-line="46" selection-start-column="71" selection-end-line="46" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+>>>>>>> bash_fork
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/packages.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="80">
           <caret line="188" selection-start-line="188" selection-end-line="188" />
+=======
+        <state relative-caret-position="222">
+          <caret line="134" column="35" lean-forward="true" selection-start-line="134" selection-start-column="35" selection-end-line="134" selection-end-column="35" />
+>>>>>>> bash_fork
           <folding>
             <element signature="e#729#773#0" expanded="true" />
           </folding>
